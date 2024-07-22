@@ -22,7 +22,7 @@ $$
 X_{i2} \sim \text{Poisson}(\alpha_{i2}(\mathbf{S}^T \mathbf{z}_{i2}+ \mathbf{W}^T \mathbf{t} )) \\
 $$
 
-Note $t$ , as above should have a subscript $\mathbf{t}_{i2}$, I just could not get it to display properly in markdown. 
+Note $\mathbf{t}$ as shown above should have a subscript $\mathbf{t}_{i2}$, I just could not get it to display properly in markdown. 
   - $i1$: index of cells (rows) in case sample $X$
   - $i2$: index of cells (rows) in control sample $Y$
   - $\mathbf{z}_{i1,l} \sim \text{Gamma}(\gamma_1, \beta_1) $: *shared, one entry* $i1,l$ latent variable for case sample
