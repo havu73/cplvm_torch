@@ -17,7 +17,7 @@ Y_{i1} \sim \text{Poisson}(\alpha_{i1}\mathbf{\sigma} \circ (\mathbf{S}^T \mathb
 $$
 
 $$
-x=y+z \\  
+X_{i2} \sim \text{Poisson}() \\  
 $$
 
 [//]: # ($$)
