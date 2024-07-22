@@ -16,9 +16,16 @@ $$
 Y_{i1} \sim \text{Poisson}(\alpha_{i1}\mathbf{\sigma} \circ (\mathbf{S}^T \mathbf{z}_{i1})) 
 $$
 
+and
 $$
 X_{i2} \sim \text{Poisson}(\alpha_{i2}(\mathbf{S}^T \mathbf{z}_{i2} + \mathbf{W}^T \mathbf{t}_{i2}))
 $$
+
+[//]: # ($$)
+
+[//]: # (X_{i2} \sim \text{Poisson}&#40;\alpha_{i2}&#40;\mathbf{S}^T \mathbf{z}_{i2} + \mathbf{W}^T \mathbf{t}_{i2}&#41;&#41;)
+
+[//]: # ($$)
 
 
 where: 
