@@ -11,18 +11,18 @@ In this paper, the authors propose a novel probabilistic model for case-control 
   - $m$ is the number of genes.
   - Let $X$ represents data from case sample and $Y$ represents data from control sample.
 - **Generative model**:
-  - $Y_{i1} \sim \text{Poisson}(\alpha_{i1}\mathbf{\sigma} \circ (\mathbf{S}^T \mathbf{z}_{i1}))$
-  - $X_{i2} \sim \text{Poisson}(\alpha_{i2} (\mathbf{S}^T \mathbf{z}_{i2} + \mathbf{W}^T \mathbf{t}_{i2}))$
+- **Generative model**:
+  - \( Y_{i1} \sim \text{Poisson}(\alpha_{i1}\mathbf{\sigma} \circ (\mathbf{S}^T \mathbf{z}_{i1})) \)
+  - \( X_{i2} \sim \text{Poisson}(\alpha_{i2} (\mathbf{S}^T \mathbf{z}_{i2} + \mathbf{W}^T \mathbf{t}_{i2})) \)
+  - \(i1\): index of cells (rows) in case sample \(X\)
+  - \(i2\): index of cells (rows) in control sample \(Y\)
+  - \( \mathbf{z}_{i1,l} \sim \text{Gamma}(\gamma_1, \beta_1) \): *shared, one entry \(i1,l\)* latent variable for case sample
+  - \( \mathbf{z}_{i2,l} \sim \text{Gamma}(\gamma_2, \beta_2) \): *shared, one entry \(i2,l\)* latent variable for control sample
+  - \( \mathbf{t}_{i2,d} \sim \text{Gamma}(\gamma_3, \beta_3) \): *foreground-specific, one entry \({i2,d}\)* latent variable for control sample \(X\). 
+  - \( \mathbf{S} \in \mathbb{R}^{L \times m} \): loading matrix (weights) shared across the background (\(Y, z_{i1}\)) and foreground (\(X, z_{i2}\)) samples. 
+  - \( \mathbf{W} \in \mathbb{R}^{D \times m} \): loading matrix (weights) specific to the foreground sample \(X\).
+  - The model learns the optimal values of \(\mathbf{S}\), \(\mathbf{W}\), \(z_{i1}\), \(z_{i2}\), \(t_{i1}\) that best fit the data \(X\) and \(Y\), with prior distributions. Inference framework is based on variational inference, with the objective to maximize the ELBO, and log-normal variational distributions for latent variables. Please kindly refer to the paper for details about the models, since there is no way to shortly explain it in this README.
 
-where 
-    - $i1$: index of cells (rows) in case sample $X$
-    - $i2$: index of cells (rows) in control sample $Y$
-    - $\mathbf{z}_{i1,l } \sim Gamma(\gamma_1, \beta_1)$: *shared, one entry $i1,l$* latent variable for case sample
-    - $\mathbf{z}_{i2, l} \sim Gamma(\gamma_2, \beta_2)$: *shared, one entry $i2,l$* latent variable for control sample
-    - $\mathbf{t}_{i2, d} \sim Gamma(\gamma_3, \beta_3)$: *foreground-specific, one entry ${i2, d}$* latent variable for control sample $X$. 
-    - $\mathbf{S} \in \mathbb{R}^{L \times m}$: loading matrix (weights) shared across the background ($Y, z_{i1}$) and foreground ($X, z_{i2}$) samples. 
-    - $\mathbf{W} \in \mathbb{R}^{D \times m}$: loading matrix (weights) specific to the foreground sample $X$.
-    - The model learns the optimal values of $\mathbf{S}$, $\mathbf{W}$, $z_{i1}$, $z_{i2}$, $t_{i1}$ that best fit the data $X$ and $Y$, with prior distributions. Inference framework is based on variational inference, with the objective to maximize the ELBO, and log-normal variational distributions for latent variables. Please kindly refer to the paper for details about the models, since there is no way to shortly explain it in this README. 
 
 ## Examples
 
