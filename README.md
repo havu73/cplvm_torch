@@ -17,7 +17,7 @@ Y_{i1} \sim \text{Poisson}(\alpha_{i1}\mathbf{\sigma} \circ (\mathbf{S}^T \mathb
 $$
 
 $$
-X_{i2} \sim \text{Poisson}(\alpha_{i2}(\mathbf{S}^T \mathbf{z}_{i1}+ \mathbf{W}^T)) \\  
+X_{i2} \sim \text{Poisson}(\alpha_{i2}(\mathbf{S}^T \mathbf{z}_{i1}+ \mathbf{W}^T \beta )) \\  
 $$
 
 [//]: # ($$)
