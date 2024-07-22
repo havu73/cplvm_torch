@@ -11,9 +11,10 @@ In this paper, the authors propose a novel probabilistic model for case-control 
   - $m$ is the number of genes.
   - Let $X$ represents data from case sample and $Y$ represents data from control sample.
 - **Generative model**:
-    - $Y_{i1} \sim \text{Poisson}(\alpha_{i1}\mathbf{\sigma} \circ (\mathbf{S}^T \mathbf{z}_{i1}))$
-    - $X_{i2} \sim \text{Poisson}(\alpha_{i2} (\mathbf{S}^T \mathbf{z}_{i2} + \mathbf{W}^T \mathbf{t}_{i2}))$
-  where 
+  - $Y_{i1} \sim \text{Poisson}(\alpha_{i1}\mathbf{\sigma} \circ (\mathbf{S}^T \mathbf{z}_{i1}))$
+  - $X_{i2} \sim \text{Poisson}(\alpha_{i2} (\mathbf{S}^T \mathbf{z}_{i2} + \mathbf{W}^T \mathbf{t}_{i2}))$
+
+where 
     - $i1$: index of cells (rows) in case sample $X$
     - $i2$: index of cells (rows) in control sample $Y$
     - $\mathbf{z}_{i1,l } \sim Gamma(\gamma_1, \beta_1)$: *shared, one entry $i1,l$* latent variable for case sample
