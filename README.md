@@ -13,11 +13,13 @@ In this paper, the authors propose a novel probabilistic model for case-control 
 - **Generative model**:
 
 $$
-Y_{i1} \sim \text{Poisson}(\alpha_{i1}\mathbf{\sigma} \circ (\mathbf{S}^T \mathbf{z}_{i1})) \\
+Y_{i1} \sim \text{Poisson}(\alpha_{i1}\mathbf{\sigma} \circ (\mathbf{S}^T \mathbf{z}_{i1})) 
 $$
 
+and 
+
 $$
-X_{i2} \sim \text{Poisson}(\alpha_{i2}(\mathbf{S}^T \mathbf{z}_{i2}+ \mathbf{W}^T \mathbf{s}_{i2} )) \\  
+X_{i2} \sim \text{Poisson}(\alpha_{i2}(\mathbf{S}^T \mathbf{z}_{i2}+ \mathbf{W}^T \mathbf{t}_{i2} )) \\  
 $$
 
 [//]: # ($$)
