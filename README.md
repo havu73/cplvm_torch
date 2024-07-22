@@ -19,8 +19,9 @@ $$
 and 
 
 $$
-X_{i2} \sim \text{Poisson}(\alpha_{i2}(\mathbf{S}^T \mathbf{z}_{i2}+ \mathbf{W}^T \mathbf{t} )) 
+X_{i2} \sim \text{Poisson}(\alpha_{i2}(\mathbf{S}^T \mathbf{z}_{i2}+ \mathbf{W}^T \mathbf{t} )) \\
 $$
+
 where: 
   - $i1$: index of cells (rows) in case sample $X$
   - $i2$: index of cells (rows) in control sample $Y$
